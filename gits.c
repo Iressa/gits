@@ -1,18 +1,18 @@
-extern      int Dig_x, Dig_y;
-extern      int Check_mode, Dig_mode, Pom_mode;
-extern      int Brush_num, Arrow_num;
-extern      int Stamp_num, Stamp_mode;
-extern      int Escap_flag;
-extern      int Htyp_x, Htyp_y;
-extern      int Ptyp_x, Ptyp_y;
-extern      int Btyp_x, Btyp_y;
-extern      Setups Su;
-extern      Status St;
-extern      Cur_Type Cur_typ(ALL_BRUSH);
+extern int      Dig_x, Dig_y;
+extern int      Check_mode, Dig_mode, Pom_mode;
+extern int      Brush_num, Arrow_num;
+extern int      Stamp_num, Stamp_mode;
+extern int      Escap_flag;
+extern int      Htyp_x, Htyp_y;
+extern int      Ptyp_x, Ptyp_y;
+extern int      Btyp_x, Btyp_y;
+extern Setups   Su;
+extern Status   St;
+extern Cur_Type Cur_typ(ALL_BRUSH);
 
 ChgBrush()
 {
-    int     flag, curcol1, curcol2;
+    int         flag, curcol1, curcol2;
 
     Escap_flag = ON;
     text_cls();
@@ -32,7 +32,7 @@ ChgBrush()
         CurSeg(CUR_ARROW);
         flag = OFF;
         do {
-            if(flag == ON) println(); // Maybe?
+            if(flag == ON) println();
             else DigIn();
             Dig_x += Su.brush_x;
             PbCursor(Dig_x, Dig_y);
